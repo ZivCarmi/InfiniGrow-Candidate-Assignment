@@ -1,0 +1,29 @@
+.channels-table .table-nav {
+  height: 0;
+  position: sticky;
+  top: 19px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6px;
+}
+
+.channels-table .table-nav .arrow {
+  background-color: #fff;
+  border-left: 2px solid var(--lighter-blue5);
+  border-bottom: 2px solid var(--lighter-blue5);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  right: 6px;
+}
+
+.channels-table .table-nav .arrow.left {
+  transform: rotate(45deg);
+  left: 6px;
+}
+
+.channels-table .table-nav .arrow.right {
+  transform: rotate(-135deg);
+  right: 6px;
+}

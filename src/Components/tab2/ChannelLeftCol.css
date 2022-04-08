@@ -26,3 +26,9 @@
   font-weight: var(--fw500);
   line-height: 1.5;
 }
+
+@media (min-width: 500px) {
+  .channel-left-col {
+    grid-template-columns: auto minmax(0, 80px);
+  }
+}

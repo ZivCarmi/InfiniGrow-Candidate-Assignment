@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import { ChannelsContext } from "../context/ChannelsContext";
+import { ChannelsContext } from "../../context/ChannelsContext";
 import "./ChannelHeadline.css";
 
 const ChannelHeadline = ({
@@ -15,13 +15,13 @@ const ChannelHeadline = ({
   const { openChannel, setOpenChannel } = useContext(ChannelsContext);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  // Open/close channel content
   const toggleChannelVisibility = (id) =>
     setOpenChannel(openChannel === id ? "" : id);
 
-  const setDropdownEvent = () => {
-    setIsDropdownOpen(false);
-  };
+  const setDropdownEvent = () => setIsDropdownOpen(false);
 
+  // Display/hide dropdown
   const handleDropdown = (e) => {
     if (!isDropdownOpen) window.addEventListener("click", setDropdownEvent);
 
@@ -29,17 +29,21 @@ const ChannelHeadline = ({
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  // Clean dropdown event
   useEffect(() => {
     return () => window.removeEventListener("click", setDropdownEvent);
   }, []);
 
+  // Start edit
   const handleEditBtn = () => setIsEdit(true);
 
   // Prevent channel toggle
   const handleEditInputClick = (e) => e.stopPropagation();
 
+  // Set new title
   const handleEditChange = (e) => setNewTitle(e.target.value);
 
+  // On save edit click
   const handleFinishEdit = (e) => {
     // Prevent channel toggle
     e.stopPropagation();
@@ -55,6 +59,7 @@ const ChannelHeadline = ({
     setIsEdit(false);
   };
 
+  // On remove channel click
   const handleRemoveBtn = () => setChannelToRemove(id);
 
   return (

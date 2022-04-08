@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ChannelsContext } from "../context/ChannelsContext";
+import { ChannelsContext } from "../../context/ChannelsContext";
 import "./BudgetAllocation.css";
 
 const allocations = ["Equal", "Manual"];

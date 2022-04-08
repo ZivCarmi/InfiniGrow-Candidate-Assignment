@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import { ChannelsContext } from "../context/ChannelsContext";
+import { ChannelsContext } from "../../context/ChannelsContext";
 import "./BudgetFrequency.css";
 
 const frequencies = ["Annually", "Monthly", "Quarterly"];
@@ -9,14 +9,11 @@ const BudgetFrequency = ({ channel }) => {
   const { handleChannelChange } = useContext(ChannelsContext);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  useEffect(() => {
-    return () => window.removeEventListener("click", setDropdownEvent);
-  }, []);
-
   const setDropdownEvent = () => {
     setIsDropdownOpen(false);
   };
 
+  // Display/hide dropdown
   const handleDropdown = (e) => {
     if (!isDropdownOpen) {
       window.addEventListener("click", setDropdownEvent);
@@ -25,6 +22,11 @@ const BudgetFrequency = ({ channel }) => {
     e.stopPropagation();
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  // Clean dropdown event
+  useEffect(() => {
+    return () => window.removeEventListener("click", setDropdownEvent);
+  }, []);
 
   return (
     <div className="budget-frequency">
@@ -65,7 +67,7 @@ const BudgetFrequency = ({ channel }) => {
         </button>
         {isDropdownOpen && (
           <div className="nav-flyout">
-            {frequencies.map((frequency, key) => {
+            {frequencies.map((frequency) => {
               return (
                 <button
                   type="button"

@@ -1,0 +1,11 @@
+#edit-field-pencil {
+  display: block;
+  height: 100%;
+}
+
+#edit-field-pencil svg {
+  width: 14px;
+  height: 14px;
+  filter: invert(85%) sepia(16%) saturate(417%) hue-rotate(190deg)
+    brightness(87%) contrast(92%);
+}

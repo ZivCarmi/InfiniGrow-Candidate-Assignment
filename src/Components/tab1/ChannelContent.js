@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import { ChannelsContext } from "../context/ChannelsContext";
+import { ChannelsContext } from "../../context/ChannelsContext";
 import BudgetFrequency from "./BudgetFrequency";
 import BaselineBudget from "./BaselineBudget";
 import BudgetAllocation from "./BudgetAllocation";

@@ -1,0 +1,8 @@
+.channels-table {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) auto;
+  width: 100%;
+  margin-top: 45px;
+  border-spacing: 0;
+  overflow: hidden;
+}

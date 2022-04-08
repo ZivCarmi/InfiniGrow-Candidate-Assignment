@@ -15,8 +15,6 @@ const BaselineBudget = ({
     setBaselineBudget(value);
   };
 
-  console.log(budgetFrequency);
-
   return (
     <div className="baseline-budget">
       <div className="label-wrapper">

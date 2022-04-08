@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { ChannelsContext } from "../context/ChannelsContext";
+import { ChannelsContext } from "../../context/ChannelsContext";
 import Channel from "./Channel";
+import "./Tab1Content.css";
 
 const Tab1Content = () => {
   const { channels } = useContext(ChannelsContext);

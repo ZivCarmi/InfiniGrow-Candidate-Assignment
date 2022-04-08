@@ -22,10 +22,12 @@ const FieldColumn = ({
 
   // On field change
   const handleChange = (e) => {
-    // Clean commas in the number
-    const value = e.target.value.replaceAll(",", "");
+    const value = e.target.value;
 
-    if (isNaN(value)) return;
+    // number with decimal pattern
+    const regex = /^\d+(\.\d+)?$/;
+
+    if (!regex.test(value)) return;
 
     setFieldValue(value);
   };
@@ -49,6 +51,7 @@ const FieldColumn = ({
         className="sum-wrapper"
         onMouseEnter={handleMouseIn}
         onMouseLeave={handleMouseOut}
+        style={{ width: isEdit && "100px" }}
       >
         <div className="sum">
           {isEdit ? (
@@ -105,11 +108,6 @@ const FieldColumn = ({
             </>
           )}
         </div>
-        {/* <div className="edit-field-wrapper"> */}
-        {/* {isHover && !isEdit && ( */}
-
-        {/* )} */}
-        {/* </div> */}
       </div>
     </td>
   );

@@ -1,0 +1,18 @@
+.channels-table .channels-list .heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 80px);
+  justify-content: space-between;
+  padding-left: 27px;
+  color: var(--lighter-blue);
+  font-size: var(--font11);
+  font-weight: var(--fw700);
+  line-height: 1.5;
+}
+
+.channels-table .channels-list .heading .label {
+  padding-top: 15px;
+}
+
+.channels-table .channels-list .heading .gradient-seperator {
+  min-height: auto;
+}

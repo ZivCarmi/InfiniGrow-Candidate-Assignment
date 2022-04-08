@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import { ChannelsContext } from "../context/ChannelsContext";
+import { ChannelsContext } from "../../context/ChannelsContext";
 import ChannelHeadline from "./ChannelHeadline";
 import ChannelContent from "./ChannelContent";
 import "./Channel.css";
@@ -13,6 +13,7 @@ const Channel = ({ channel }) => {
   const [isFinishedEdit, setIsFinishedEdit] = useState(false);
   const [channelToRemove, setChannelToRemove] = useState("");
 
+  // Save new title
   useEffect(() => {
     if (!isFinishedEdit) return;
 
@@ -25,6 +26,7 @@ const Channel = ({ channel }) => {
     setIsFinishedEdit(false);
   }, [isFinishedEdit]);
 
+  // Delete selected channel
   useEffect(() => {
     if (!channelToRemove) return;
 

@@ -1,13 +1,11 @@
 import { useState } from "react";
-import "./TabsNav.css";
+import "./TabsContent.css";
 
 const TabsContent = ({ children }) => {
   const [activeTab, setActiveTab] = useState(children[0].props.label);
 
-  const tabSwitch = (e, label) => {
-    e.preventDefault();
-    setActiveTab(label);
-  };
+  // Switch between tabs
+  const switchTab = (label) => setActiveTab(label);
 
   return (
     <div className="app-content">
@@ -22,7 +20,7 @@ const TabsContent = ({ children }) => {
                 className={`tab-link${
                   label === activeTab ? " tab-active" : ""
                 }`}
-                onClick={(e) => tabSwitch(e, label)}
+                onClick={() => switchTab(label)}
               >
                 {label}
               </button>

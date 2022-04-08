@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import { ChannelsContext } from "../context/ChannelsContext";
+import { ChannelsContext } from "../../context/ChannelsContext";
 import FieldColumn from "./FieldColumn";
 import "./ChannelRightCol.css";
 
@@ -9,6 +9,7 @@ const ChannelRightCol = ({ channel }) => {
   const [newFieldValue, setNewFieldValue] = useState({});
   const [isFinishedEdit, setIsFinishedEdit] = useState(false);
 
+  // Update budget breakdown fields
   useEffect(() => {
     if (!isFinishedEdit) return;
 

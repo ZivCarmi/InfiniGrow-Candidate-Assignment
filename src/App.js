@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { ChannelsContext } from "./context/ChannelsContext";
-import Headline from "./Components/Headline";
-import TabsContent from "./Components/TabsContent";
-import Tab1Content from "./Components/Tab1Content";
-import Tab2Content from "./Components/Tab2Content";
+import Headline from "./components/Headline";
+import TabsContent from "./components/TabsContent";
+import Tab1Content from "./components/tab1/Tab1Content";
+import Tab2Content from "./components/tab2/Tab2Content";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
