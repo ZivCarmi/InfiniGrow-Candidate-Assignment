@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import { ChannelsContext } from "../../context/ChannelsContext";
 import ChannelRightCol from "./ChannelRightCol";
 import TableNav from "./TableNav";
 import "./TableRightList.css";
 
-const TableRightList = ({ channels }) => {
+const TableRightList = () => {
+  const { channels } = useContext(ChannelsContext);
+
   return (
     <div className="table-container">
       <TableNav />

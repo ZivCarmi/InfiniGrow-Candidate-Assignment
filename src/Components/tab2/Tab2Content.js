@@ -17,12 +17,12 @@ const Tab2Content = () => {
     });
   });
 
-  return (
+  return channels.length ? (
     <div className="channels-table">
-      <TableLeftList channels={channels} />
-      <TableRightList channels={channels} />
+      <TableLeftList />
+      <TableRightList />
     </div>
-  );
+  ) : null;
 };
 
 export default Tab2Content;
