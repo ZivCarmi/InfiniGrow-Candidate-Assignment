@@ -1,0 +1,48 @@
+.channels-row .channel-box {
+  border: 1px solid var(--lighter-blue3);
+  border-radius: 4px;
+}
+
+.channels-row .channel-box:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.channel-box .channel-content {
+  padding: 16px;
+}
+
+.budget-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.budget-options > *:not(:last-child) {
+  margin: 0 56px 20px 0;
+}
+
+.budget-options .label-wrapper {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.budget-options .label-wrapper .label {
+  font-size: var(--font14);
+  color: var(--dark-blue2);
+  line-height: 1.5;
+}
+
+.budget-options .label-wrapper svg {
+  width: 16px;
+  height: 16px;
+  color: var(--lighter-blue);
+  margin-left: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .channel-box .channel-content {
+    padding: 32px;
+  }
+}

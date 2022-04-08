@@ -1,0 +1,86 @@
+.channel-box .channel-headline {
+  display: flex;
+  background-color: var(--light-gray);
+  border-radius: 3px;
+}
+
+.channel-box.active .channel-headline {
+  border-bottom: 1px solid var(--lighter-blue3);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.channel-box .channel-headline .toggle-channel-btn {
+  display: flex;
+  flex-grow: 1;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.channel-box .channel-headline .arrow {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid var(--lighter-blue3);
+  margin-right: 30px;
+  align-self: center;
+}
+
+.channel-box.active .channel-headline .arrow {
+  transform: rotate(90deg);
+}
+
+.channel-box .channel-headline .channel-info,
+.channel-box .channel-headline .channel-actions {
+  display: flex;
+  align-items: center;
+}
+
+.channel-box .channel-headline .channel-info .channel-title {
+  user-select: none;
+  font-size: var(--font14);
+}
+
+.channel-box .channel-headline .channel-actions {
+  margin-right: 16px;
+}
+
+.channel-box .channel-headline .channel-icon {
+  height: 36px;
+  margin-right: 12px;
+  border-radius: 3px;
+}
+
+#edit-channel-title {
+  padding: 8px 16px;
+}
+
+#channel-actions-btn {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#channel-actions-btn > span {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: var(--lighter-blue3);
+  pointer-events: none;
+}
+
+#channel-actions-btn > span:not(:last-child) {
+  margin-right: 2px;
+}
+
+.channel-actions .nav-flyout {
+  left: initial;
+  right: -9px;
+  top: calc(100% - 16px);
+}
+
+#remove-channel-btn {
+  background-color: #fde8ea;
+  color: var(--red);
+}

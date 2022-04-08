@@ -1,0 +1,41 @@
+.channels-table table tbody td {
+  padding: 0;
+}
+
+.channels-table table tbody td .sum-wrapper {
+  display: flex;
+  position: relative;
+  padding-right: 25px;
+}
+
+.channels-table table tbody td .edit-field-wrapper {
+  position: relative;
+}
+
+#edit-field-pencil {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 6px);
+}
+
+.channels-table table tbody td .sum {
+  font-size: var(--font14);
+  font-weight: var(--fw500);
+  color: var(--dark-blue4);
+  line-height: 1.5;
+  position: relative;
+}
+
+.channels-table table tbody td .sum .input-wrapper {
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.channels-table table tbody td .sum input {
+  width: 80px;
+  height: 32px;
+}

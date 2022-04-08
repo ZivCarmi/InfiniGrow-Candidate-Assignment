@@ -1,0 +1,44 @@
+.breakdown-fields .single-field label {
+  display: block;
+  color: var(--dark-blue2);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.breakdown-fields .single-field .input-wrapper {
+  position: relative;
+}
+
+.breakdown-fields .single-field .currency {
+  color: var(--dark-blue3);
+  font-weight: var(--fw500);
+  line-height: 1.5;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.breakdown-fields .single-field input {
+  color: var(--lighter-blue);
+  font-size: inherit;
+  padding-left: 32px;
+}
+
+.breakdown-fields .single-field input:not(:disabled) {
+  color: var(--dark-blue3);
+}
+
+.breakdown-fields .single-field input:disabled {
+  background: linear-gradient(360deg, #fafafc 0%, #ffffff 100%);
+}
+
+.breakdown-fields .single-field input::-webkit-outer-spin-button,
+.breakdown-fields .single-field input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.breakdown-fields .single-field input[type="number"] {
+  -moz-appearance: textfield;
+}

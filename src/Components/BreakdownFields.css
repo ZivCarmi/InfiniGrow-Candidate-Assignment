@@ -1,0 +1,7 @@
+.budget-breakdown .breakdown-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 160px);
+  grid-gap: 24px;
+  font-size: var(--font14);
+  margin-top: 24px;
+}

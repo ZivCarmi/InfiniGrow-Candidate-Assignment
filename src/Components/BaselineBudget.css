@@ -1,0 +1,10 @@
+#baseline-budget-input:disabled {
+  background: linear-gradient(360deg, #fafafc 0%, #ffffff 100%);
+  color: var(--lighter-blue);
+}
+
+@media (min-width: 1024px) {
+  #baseline-budget-input {
+    min-width: 237px;
+  }
+}

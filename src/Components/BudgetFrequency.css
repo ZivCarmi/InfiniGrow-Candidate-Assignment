@@ -1,0 +1,22 @@
+#budget-frequency-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dark-blue3);
+  background: linear-gradient(360deg, #fafafc 0%, #ffffff 100%);
+}
+
+#budget-frequency-btn .arrow-icon {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--lighter-blue3);
+}
+
+@media (min-width: 1024px) {
+  #budget-frequency-btn {
+    min-width: 226px;
+  }
+}

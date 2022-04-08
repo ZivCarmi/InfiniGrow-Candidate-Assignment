@@ -1,0 +1,18 @@
+.tabs-nav {
+  display: flex;
+}
+
+.tabs-nav .tab-item:not(:last-child) {
+  margin-right: 26px;
+}
+
+.tabs-nav .tab-link {
+  color: var(--gray);
+  font-size: var(--font20);
+  font-weight: var(--fw600);
+}
+
+.tabs-nav .tab-link.tab-active {
+  border-bottom: 3px solid var(--black);
+  color: var(--black);
+}

@@ -1,0 +1,67 @@
+.app-headline {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 53px;
+}
+
+.app-headline .app-title {
+  font-size: var(--font24);
+  font-weight: var(--fw500);
+  color: var(--dark-blue);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.app-headline .description-title {
+  font-size: var(--font18);
+  font-weight: var(--fw600);
+  color: var(--dark-blue);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.app-headline .description {
+  font-size: var(--font14);
+  color: var(--lighter-blue);
+  line-height: 1.5;
+}
+
+.app-headline .app-actions {
+  align-self: end;
+  justify-self: end;
+}
+
+#add-channel-btn {
+  display: flex;
+  align-items: center;
+}
+
+.plus-icon {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.plus-icon::before,
+.plus-icon::after {
+  content: "";
+  background-color: var(--light-blue);
+  grid-area: 1/1/2/2;
+}
+
+.plus-icon::before {
+  width: 2px;
+  height: 10px;
+}
+
+.plus-icon::after {
+  width: 10px;
+  height: 2px;
+}
+
+@media (min-width: 1024px) {
+  .app-headline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
